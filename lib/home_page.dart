@@ -1,8 +1,9 @@
+import 'package:caption_it/favourites_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'caption_provider.dart';
-import 'caption_style_screen.dart';
-import 'favorites_screen.dart';
+
+
 import 'profile_screen.dart';
 
 class HomePage extends StatefulWidget {
