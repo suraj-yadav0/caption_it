@@ -104,7 +104,7 @@ class HomeScreen extends StatelessWidget {
                     final caption = captionProvider.recentCaptions[index];
                     return _RecentCaptionCard(
                       caption: caption,
-                      imageAsset: 'assets/caption_image_${index + 1}.png',
+                      imageAsset: 'https://i.postimg.cc/Qtxc8xgv/welcome-image.png',
                       onSave: () {
                         captionProvider.addToFavorites(caption);
                       },
@@ -147,7 +147,7 @@ class _RecentCaptionCard extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(8),
-              child: Image.asset(imageAsset, width: 80, height: 80),
+              child: Image.network(imageAsset, width: 80, height: 80),
             ),
            const SizedBox(width: 16),
             Expanded(
