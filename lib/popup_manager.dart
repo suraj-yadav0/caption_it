@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class PopupManager {
   static void showCaptionSavedPopup(BuildContext context) {
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
+      const SnackBar(
         content: Text('Caption saved to favorites!'),
         duration: Duration(seconds: 2),
       ),
@@ -12,7 +12,7 @@ class PopupManager {
 
   static void showShareSuccessPopup(BuildContext context) {
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
+     const SnackBar(
         content: Text('Caption shared successfully!'),
         duration: Duration(seconds: 2),
       ),

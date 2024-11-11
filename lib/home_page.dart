@@ -4,12 +4,14 @@ import 'package:caption_it/popup_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'caption_provider.dart';
-import 'caption_style_screen.dart';
 
 import 'profile_screen.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _HomePageState createState() => _HomePageState();
 }
 
@@ -17,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
-    HomeScreen(),
+    const HomeScreen(),
     FavoritesScreen(),
     ProfileScreen(),
   ];
@@ -128,7 +130,7 @@ class _RecentCaptionCard extends StatelessWidget {
   final VoidCallback onSave;
   final VoidCallback onShare;
 
-  _RecentCaptionCard({
+  const _RecentCaptionCard({
     required this.caption,
     required this.imageAsset,
     required this.onSave,
@@ -169,7 +171,7 @@ class _RecentCaptionCard extends StatelessWidget {
                     const  SizedBox(width: 16),
                       IconButton(
                         onPressed: onShare,
-                        icon: Icon(Icons.share, size: 16),
+                        icon: const Icon(Icons.share, size: 16),
                       ),
                     const  Text('Share'),
                     ],
