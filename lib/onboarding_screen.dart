@@ -14,22 +14,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     {
       'title': 'Welcome to CaptionIt',
       'description': 'Your personal caption assistant!',
-      'imageAsset': 'assets/onboarding_1.png',
+      'imageAsset': 'https://i.postimg.cc/Qtxc8xgv/welcome-image.png',
     },
     {
       'title': 'Upload a Photo',
       'description': 'Choose an image to get started.',
-      'imageAsset': 'assets/onboarding_2.png',
+      'imageAsset': 'https://i.postimg.cc/Qtxc8xgv/welcome-image.png',
     },
     {
       'title': 'Select a Caption Style',
       'description': 'Pick from Funny, Inspirational, Poetic, or Romantic.',
-      'imageAsset': 'assets/onboarding_3.png',
+      'imageAsset': 'https://i.postimg.cc/Qtxc8xgv/welcome-image.png',
     },
     {
       'title': 'Generate Captions',
       'description': 'Discover the perfect caption for your photo.',
-      'imageAsset': 'assets/onboarding_4.png',
+      'imageAsset': 'https://i.postimg.cc/Qtxc8xgv/welcome-image.png',
     },
   ];
 
@@ -37,20 +37,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(_onboardingPages[_currentPage]['imageAsset'],
+            Image.network(_onboardingPages[_currentPage]['imageAsset'],
                 height: 200),
-            SizedBox(height: 16),
+          const  SizedBox(height: 16),
             Text(
               _onboardingPages[_currentPage]['title'],
               style: Theme.of(context).textTheme.headlineSmall,
             ),
-            SizedBox(height: 8),
+          const  SizedBox(height: 8),
             Text(_onboardingPages[_currentPage]['description']),
-            SizedBox(height: 16),
+          const  SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(
@@ -58,7 +58,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 (index) => _buildPageIndicator(index == _currentPage),
               ),
             ),
-            SizedBox(height: 16),
+          const  SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
                 if (_currentPage < _onboardingPages.length - 1) {
