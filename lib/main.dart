@@ -1,9 +1,10 @@
+import 'package:caption_it/caption_suggestion_screen.dart';
+import 'package:caption_it/favourites_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'home_page.dart';
 import 'caption_style_screen.dart';
-import 'caption_suggestions_screen.dart';
-import 'favorites_screen.dart';
+
 import 'profile_screen.dart';
 import 'onboarding_screen.dart';
 import 'caption_provider.dart';
