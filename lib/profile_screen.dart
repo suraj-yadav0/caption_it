@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _ProfileScreenState createState() => _ProfileScreenState();
 }
 
@@ -14,28 +17,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile'),
+        title: const Text('Profile'),
+        centerTitle: true,
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CircleAvatar(
+         const   CircleAvatar(
               radius: 40,
               backgroundImage: AssetImage('assets/profile_image.png'),
             ),
-            SizedBox(height: 16),
-            Text('Username'),
-            SizedBox(height: 8),
-            Text('Your personal captioning app'),
-            SizedBox(height: 16),
-            Text('Settings:'),
-            SizedBox(height: 8),
+          const  SizedBox(height: 16),
+          const  Text('Username'),
+          const  SizedBox(height: 8),
+          const  Text('Your personal captioning app'),
+          const  SizedBox(height: 16),
+          const  Text('Settings:'),
+          const  SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Language'),
+           const     Text('Language'),
                 DropdownButton<String>(
                   value: _language,
                   items: ['English', 'Spanish', 'French']
@@ -52,11 +56,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ],
             ),
-            SizedBox(height: 8),
+          const  SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Default Style'),
+             const   Text('Default Style'),
                 DropdownButton<String>(
                   value: _defaultStyle,
                   items: ['Funny', 'Inspirational', 'Poetic', 'Romantic']
@@ -73,27 +77,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ],
             ),
-            SizedBox(height: 8),
+          const  SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('API Usage'),
+             const   Text('API Usage'),
                 Text('$_apiUsage/100 Captions'),
               ],
             ),
-            SizedBox(height: 16),
+           const SizedBox(height: 16),
             ElevatedButton(
               onPressed: (){
   // Implement subscription/upgrade functionality
 },
-child: Text('Subscription Options'),
+child: const Text('Subscription Options'),
 ),
-SizedBox(height: 16),
+const SizedBox(height: 16),
 ElevatedButton(
   onPressed: () {
     // Implement logout functionality
   },
-  child: Text('Logout'),
+  child: const Text('Logout'),
 ),
 ],
 ),
