@@ -16,10 +16,10 @@ class _CaptionStyleScreenState extends State<CaptionStyleScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Caption Style Selection'),
+        title: const Text('Caption Style Selection'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
