@@ -12,10 +12,10 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Favorites'),
+        title: const Text('My Favorites'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Consumer<CaptionProvider>(
           builder: (context, captionProvider, child) {
             return ListView.builder(
