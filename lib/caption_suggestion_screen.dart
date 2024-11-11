@@ -3,7 +3,10 @@ import 'package:provider/provider.dart';
 import 'caption_provider.dart';
 
 class CaptionSuggestionsScreen extends StatefulWidget {
+  const CaptionSuggestionsScreen({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _CaptionSuggestionsScreenState createState() =>
       _CaptionSuggestionsScreenState();
 }
@@ -15,10 +18,10 @@ class _CaptionSuggestionsScreenState extends State<CaptionSuggestionsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Caption Suggestions'),
+        title: const Text('Caption Suggestions'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -32,11 +35,11 @@ class _CaptionSuggestionsScreenState extends State<CaptionSuggestionsScreen> {
                         Provider.of<CaptionProvider>(context, listen: false);
                     captionProvider.generateNewCaptions(['New caption 1', 'New caption 2', 'New caption 3']);
                   },
-                  child: Text('Re-generate'),
+                  child: const Text('Re-generate'),
                 ),
               ],
             ),
-            SizedBox(height: 16),
+           const SizedBox(height: 16),
             Expanded(
               child: Consumer<CaptionProvider>(
                 builder: (context, captionProvider, child) {
@@ -70,7 +73,7 @@ class _CaptionSuggestionCard extends StatelessWidget {
   final VoidCallback onSave;
   final VoidCallback onShare;
 
-  _CaptionSuggestionCard({
+  const _CaptionSuggestionCard({
     required this.caption,
     required this.onSave,
     required this.onShare,
@@ -80,17 +83,17 @@ class _CaptionSuggestionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Row(
           children: [
             Expanded(child: Text(caption)),
             IconButton(
               onPressed: onSave,
-              icon: Icon(Icons.favorite_border),
+              icon: const Icon(Icons.favorite_border),
             ),
             IconButton(
               onPressed: onShare,
-              icon: Icon(Icons.share),
+              icon: const Icon(Icons.share),
             ),
           ],
         ),
