@@ -12,11 +12,13 @@ import 'caption_provider.dart';
 void main() {
   runApp(ChangeNotifierProvider(
     create: (_) => CaptionProvider(),
-    child: CaptionItApp(),
+    child: const CaptionItApp(),
   ));
 }
 
 class CaptionItApp extends StatelessWidget {
+  const CaptionItApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,12 +29,12 @@ class CaptionItApp extends StatelessWidget {
       ),
       initialRoute: '/onboarding',
       routes: {
-        '/': (context) => HomePage(),
+        '/': (context) => const HomePage(),
         '/onboarding': (context) => OnboardingScreen(),
         '/caption-style': (context) => CaptionStyleScreen(),
-        '/caption-suggestions': (context) => CaptionSuggestionsScreen(),
-        '/favorites': (context) => FavoritesScreen(),
-        '/profile': (context) => ProfileScreen(),
+        '/caption-suggestions': (context) => const CaptionSuggestionsScreen(),
+        '/favorites': (context) => const FavoritesScreen(),
+        '/profile': (context) => const ProfileScreen(),
       },
     );
   }
