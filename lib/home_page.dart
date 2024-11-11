@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
             _currentIndex = index;
           });
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
@@ -63,10 +63,12 @@ class _HomePageState extends State<HomePage> {
 }
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -76,16 +78,16 @@ class HomeScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, '/caption-style');
                 },
-                icon: Icon(Icons.camera_alt),
-                label: Text('Upload Photo'),
+                icon: const Icon(Icons.camera_alt),
+                label: const Text('Upload Photo'),
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
-                  textStyle: TextStyle(fontSize: 18),
+                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+                  textStyle: const TextStyle(fontSize: 18),
                 ),
               ),
             ),
           ),
-          SizedBox(height: 32),
+        const  SizedBox(height: 32),
           Text(
             'Recent Captions',
             style: Theme.of(context).textTheme.titleLarge,
@@ -138,14 +140,14 @@ class _RecentCaptionCard extends StatelessWidget {
     return Card(
       elevation: 4,
       child: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Row(
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(8),
               child: Image.asset(imageAsset, width: 80, height: 80),
             ),
-            SizedBox(width: 16),
+           const SizedBox(width: 16),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -156,20 +158,20 @@ class _RecentCaptionCard extends StatelessWidget {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  SizedBox(height: 8),
+                const  SizedBox(height: 8),
                   Row(
                     children: [
                       IconButton(
                         onPressed: onSave,
-                        icon: Icon(Icons.favorite_border, size: 16),
+                        icon: const Icon(Icons.favorite_border, size: 16),
                       ),
-                      Text('Save'),
-                      SizedBox(width: 16),
+                     const Text('Save'),
+                    const  SizedBox(width: 16),
                       IconButton(
                         onPressed: onShare,
                         icon: Icon(Icons.share, size: 16),
                       ),
-                      Text('Share'),
+                    const  Text('Share'),
                     ],
                   ),
                 ],
