@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'caption_provider.dart';
-import 'caption_suggestions_screen.dart';
+
 
 class CaptionStyleScreen extends StatefulWidget {
   @override
@@ -24,8 +24,8 @@ class _CaptionStyleScreenState extends State<CaptionStyleScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset('assets/sample_photo.png', fit: BoxFit.contain),
-            SizedBox(height: 16),
-            Text('Choose Caption Style:'),
+          const  SizedBox(height: 16),
+           const Text('Choose Caption Style:'),
             DropdownButton<String>(
               value: _selectedStyle,
               items: ['Funny', 'Inspirational', 'Poetic', 'Romantic']
@@ -40,7 +40,7 @@ class _CaptionStyleScreenState extends State<CaptionStyleScreen> {
                 });
               },
             ),
-            SizedBox(height: 16),
+          const  SizedBox(height: 16),
             TextField(
               decoration: InputDecoration(
                 hintText: 'Add a custom prompt (optional)',
