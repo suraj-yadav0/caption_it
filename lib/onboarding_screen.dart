@@ -44,7 +44,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             SizedBox(height: 16),
             Text(
               _onboardingPages[_currentPage]['title'],
-              style: Theme.of(context).textTheme.headline5,
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
             SizedBox(height: 8),
             Text(_onboardingPages[_currentPage]['description']),
