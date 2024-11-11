@@ -42,7 +42,7 @@ class _CaptionStyleScreenState extends State<CaptionStyleScreen> {
             ),
           const  SizedBox(height: 16),
             TextField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Add a custom prompt (optional)',
               ),
               onChanged: (value) {
@@ -51,7 +51,7 @@ class _CaptionStyleScreenState extends State<CaptionStyleScreen> {
                 });
               },
             ),
-            SizedBox(height: 16),
+         const   SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
                 final captionProvider =
@@ -59,7 +59,7 @@ class _CaptionStyleScreenState extends State<CaptionStyleScreen> {
                 captionProvider.generateNewCaptions(['Sunkissed and living life', 'Friends, waves, and endless fun', 'This is what happiness looks like']);
                 Navigator.pushNamed(context, '/caption-suggestions');
               },
-              child: Text('Generate Captions'),
+              child: const Text('Generate Captions'),
             ),
           ],
         ),
