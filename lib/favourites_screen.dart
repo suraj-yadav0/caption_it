@@ -3,7 +3,10 @@ import 'package:provider/provider.dart';
 import 'caption_provider.dart';
 
 class FavoritesScreen extends StatefulWidget {
+  const FavoritesScreen({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _FavoritesScreenState createState() => _FavoritesScreenState();
 }
 
@@ -45,7 +48,7 @@ class _FavoriteCaptionCard extends StatelessWidget {
   final VoidCallback onDelete;
   final VoidCallback onShare;
 
-  _FavoriteCaptionCard({
+  const _FavoriteCaptionCard({
     required this.caption,
     required this.onDelete,
     required this.onShare,
@@ -55,17 +58,17 @@ class _FavoriteCaptionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Row(
           children: [
             Expanded(child: Text(caption)),
             IconButton(
               onPressed: onDelete,
-              icon: Icon(Icons.delete),
+              icon: const Icon(Icons.delete),
             ),
             IconButton(
               onPressed: onShare,
-              icon: Icon(Icons.share),
+              icon: const Icon(Icons.share),
             ),
           ],
         ),
