@@ -4,7 +4,10 @@ import 'caption_provider.dart';
 
 
 class CaptionStyleScreen extends StatefulWidget {
+  const CaptionStyleScreen({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _CaptionStyleScreenState createState() => _CaptionStyleScreenState();
 }
 
@@ -23,7 +26,7 @@ class _CaptionStyleScreenState extends State<CaptionStyleScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset('assets/sample_photo.png', fit: BoxFit.contain),
+         const  Icon(Icons.camera, size: 100,),
           const  SizedBox(height: 16),
            const Text('Choose Caption Style:'),
             DropdownButton<String>(
