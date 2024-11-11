@@ -1,10 +1,11 @@
 // home_page.dart
 import 'package:caption_it/favourites_screen.dart';
+import 'package:caption_it/popup_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'caption_provider.dart';
 import 'caption_style_screen.dart';
-import 'favorites_screen.dart';
+
 import 'profile_screen.dart';
 
 class HomePage extends StatefulWidget {
@@ -24,16 +25,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: [
-            Image.asset('assets/caption_it_logo.png', height: 32),
-            SizedBox(width: 8),
-            Text('CaptionIt'),
-          ],
-        ),
-        centerTitle: true,
-      ),
+      // appBar: AppBar(
+      //   title: Row(
+      //     children: [
+      //       Image.asset('assets/caption_it_logo.png', height: 32),
+      //       SizedBox(width: 8),
+      //       Text('CaptionIt'),
+      //     ],
+      //   ),
+      //   centerTitle: true,
+      // ),
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
@@ -89,7 +90,7 @@ class HomeScreen extends StatelessWidget {
             'Recent Captions',
             style: Theme.of(context).textTheme.titleLarge,
           ),
-          SizedBox(height: 16),
+        const  SizedBox(height: 16),
           Expanded(
             child: Consumer<CaptionProvider>(
               builder: (context, captionProvider, child) {
@@ -151,7 +152,7 @@ class _RecentCaptionCard extends StatelessWidget {
                 children: [
                   Text(
                     caption,
-                    style: Theme.of(context).textTheme.subtitle1,
+                    style: Theme.of(context).textTheme.titleMedium,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
