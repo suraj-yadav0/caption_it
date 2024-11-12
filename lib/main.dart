@@ -36,7 +36,7 @@ class CaptionItApp extends StatelessWidget {
         '/caption-suggestions': (context) => const CaptionSuggestionsScreen(),
         '/favorites': (context) => const FavoritesScreen(),
         '/profile': (context) => const ProfileScreen(),
-        '/image-picker': (context) => const ImagePickerWidget(),
+        '/image-picker': (context) => ImagePickerWidget(onImageSelected: (image) {},),
       },
     );
   }

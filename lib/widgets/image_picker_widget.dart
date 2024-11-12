@@ -3,10 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 class ImagePickerWidget extends StatefulWidget {
-  const ImagePickerWidget({super.key});
+  final void Function(File?) onImageSelected;
+
+  const ImagePickerWidget({
+    Key? key,
+    required this.onImageSelected,
+  }) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
   _ImagePickerWidgetState createState() => _ImagePickerWidgetState();
 }
 
@@ -20,26 +24,30 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
     setState(() {
       if (pickedFile != null) {
         _image = File(pickedFile.path);
+        widget.onImageSelected(_image);
       } else {
         print('No image selected.');
+        widget.onImageSelected(null);
       }
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        if (_image != null) Image.file(_image!),
-        ElevatedButton(
-          onPressed: () => _getImage(ImageSource.camera),
-          child: const Text('Take Photo'),
-        ),
-        ElevatedButton(
-          onPressed: () => _getImage(ImageSource.gallery),
-          child: const Text('Choose from Gallery'),
-        ),
-      ],
+    return SafeArea(
+      child: Column(
+        children: [
+          if (_image != null) Image.file(_image!, width: 200, height: 200),
+          ElevatedButton(
+            onPressed: () => _getImage(ImageSource.camera),
+            child: Text('Take Photo'),
+          ),
+          ElevatedButton(
+            onPressed: () => _getImage(ImageSource.gallery),
+            child: Text('Choose from Gallery'),
+          ),
+        ],
+      ),
     );
   }
 }

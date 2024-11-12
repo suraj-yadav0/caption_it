@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:caption_it/widgets/image_picker_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'caption_provider.dart';
@@ -14,6 +17,8 @@ class CaptionStyleScreen extends StatefulWidget {
 class _CaptionStyleScreenState extends State<CaptionStyleScreen> {
   String _selectedStyle = 'Funny';
   String _customPrompt = '';
+
+   File? _selectedImage;
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +38,16 @@ class _CaptionStyleScreenState extends State<CaptionStyleScreen> {
           child: const  Icon(Icons.camera, size: 100,)),
           const  SizedBox(height: 16),
            const Text('Choose Caption Style:'),
+           if (_selectedImage != null)
+              Image.file(_selectedImage!, width: 300, height: 300),
+          const  SizedBox(height: 16),
+            ImagePickerWidget(
+              onImageSelected: (image) {
+                setState(() {
+                  _selectedImage = image;
+                });
+              },
+            ),
             DropdownButton<String>(
               value: _selectedStyle,
               items: ['Funny', 'Inspirational', 'Poetic', 'Romantic']
