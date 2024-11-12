@@ -1,3 +1,4 @@
+import 'package:caption_it/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'caption_provider.dart';
@@ -16,9 +17,10 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(onPressed: (){
-          Navigator.pop(context);
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
         }, icon: const Icon(Icons.arrow_back)),
-        title: const Text('My Favorites'),
+        title: const Text('F A V O U R I T E S '),
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
