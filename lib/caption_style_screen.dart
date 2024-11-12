@@ -26,7 +26,11 @@ class _CaptionStyleScreenState extends State<CaptionStyleScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-         const  Icon(Icons.camera, size: 100,),
+         InkWell(
+          onTap: () {
+            Navigator.pushNamed(context, '/image-picker');
+          },
+          child: const  Icon(Icons.camera, size: 100,)),
           const  SizedBox(height: 16),
            const Text('Choose Caption Style:'),
             DropdownButton<String>(

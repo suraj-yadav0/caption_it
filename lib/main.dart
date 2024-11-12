@@ -1,5 +1,6 @@
 import 'package:caption_it/caption_suggestion_screen.dart';
 import 'package:caption_it/favourites_screen.dart';
+import 'package:caption_it/widgets/image_picker_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'home_page.dart';
@@ -30,11 +31,12 @@ class CaptionItApp extends StatelessWidget {
       initialRoute: '/onboarding',
       routes: {
         '/': (context) => const HomePage(),
-        '/onboarding': (context) => OnboardingScreen(),
-        '/caption-style': (context) => CaptionStyleScreen(),
+        '/onboarding': (context) => const OnboardingScreen(),
+        '/caption-style': (context) => const CaptionStyleScreen(),
         '/caption-suggestions': (context) => const CaptionSuggestionsScreen(),
         '/favorites': (context) => const FavoritesScreen(),
         '/profile': (context) => const ProfileScreen(),
+        '/image-picker': (context) => const ImagePickerWidget(),
       },
     );
   }
