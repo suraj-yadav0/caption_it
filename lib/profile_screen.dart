@@ -1,3 +1,4 @@
+import 'package:caption_it/home_page.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -20,10 +21,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
           },
         ),
-        title: const Text('Profile'),
+        title: const Text('P R O F I L E'),
         centerTitle: true,
       ),
       body: Padding(
