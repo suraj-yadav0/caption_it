@@ -37,7 +37,7 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
     return SafeArea(
       child: Column(
         children: [
-          if (_image != null) Image.file(_image!, width: 200, height: 200),
+         // if (_image != null) Image.file(_image!, width: 200, height: 200),
           ElevatedButton(
             onPressed: () => _getImage(ImageSource.camera),
             child: Text('Take Photo'),

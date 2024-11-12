@@ -26,64 +26,66 @@ class _CaptionStyleScreenState extends State<CaptionStyleScreen> {
       appBar: AppBar(
         title: const Text('Caption Style Selection'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-         InkWell(
-          onTap: () {
-            Navigator.pushNamed(context, '/image-picker');
-          },
-          child: const  Icon(Icons.camera, size: 100,)),
-          const  SizedBox(height: 16),
-           const Text('Choose Caption Style:'),
-           if (_selectedImage != null)
-              Image.file(_selectedImage!, width: 300, height: 300),
-          const  SizedBox(height: 16),
-            ImagePickerWidget(
-              onImageSelected: (image) {
-                setState(() {
-                  _selectedImage = image;
-                });
-              },
-            ),
-            DropdownButton<String>(
-              value: _selectedStyle,
-              items: ['Funny', 'Inspirational', 'Poetic', 'Romantic']
-                  .map((style) => DropdownMenuItem<String>(
-                        value: style,
-                        child: Text(style),
-                      ))
-                  .toList(),
-              onChanged: (value) {
-                setState(() {
-                  _selectedStyle = value!;
-                });
-              },
-            ),
-          const  SizedBox(height: 16),
-            TextField(
-              decoration: const InputDecoration(
-                hintText: 'Add a custom prompt (optional)',
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+           InkWell(
+            onTap: () {
+             // Navigator.pushNamed(context, '/image-picker');
+            },
+            child: const  Icon(Icons.camera, size: 100,)),
+            const  SizedBox(height: 16),
+             const Text('Choose Caption Style:'),
+             if (_selectedImage != null)
+                Image.file(_selectedImage!, width: 300, height: 300),
+            const SizedBox(height: 16),
+              ImagePickerWidget(
+                onImageSelected: (image) {
+                  setState(() {
+                    _selectedImage = image;
+                  });
+                },
               ),
-              onChanged: (value) {
-                setState(() {
-                  _customPrompt = value;
-                });
-              },
-            ),
-         const   SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: () {
-                final captionProvider =
-                    Provider.of<CaptionProvider>(context, listen: false);
-                captionProvider.generateNewCaptions(['Sunkissed and living life', 'Friends, waves, and endless fun', 'This is what happiness looks like']);
-                Navigator.pushNamed(context, '/caption-suggestions');
-              },
-              child: const Text('Generate Captions'),
-            ),
-          ],
+              DropdownButton<String>(
+                value: _selectedStyle,
+                items: ['Funny', 'Inspirational', 'Poetic', 'Romantic']
+                    .map((style) => DropdownMenuItem<String>(
+                          value: style,
+                          child: Text(style),
+                        ))
+                    .toList(),
+                onChanged: (value) {
+                  setState(() {
+                    _selectedStyle = value!;
+                  });
+                },
+              ),
+            const  SizedBox(height: 16),
+              TextField(
+                decoration: const InputDecoration(
+                  hintText: 'Add a custom prompt (optional)',
+                ),
+                onChanged: (value) {
+                  setState(() {
+                    _customPrompt = value;
+                  });
+                },
+              ),
+           const   SizedBox(height: 16),
+              ElevatedButton(
+                onPressed: () {
+                  final captionProvider =
+                      Provider.of<CaptionProvider>(context, listen: false);
+                  captionProvider.generateNewCaptions(['Sunkissed and living life', 'Friends, waves, and endless fun', 'This is what happiness looks like']);
+                  Navigator.pushNamed(context, '/caption-suggestions');
+                },
+                child: const Text('Generate Captions'),
+              ),
+            ],
+          ),
         ),
       ),
     );
