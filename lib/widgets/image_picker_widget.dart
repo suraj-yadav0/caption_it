@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 class ImagePickerWidget extends StatefulWidget {
+  const ImagePickerWidget({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _ImagePickerWidgetState createState() => _ImagePickerWidgetState();
 }
 
@@ -30,11 +33,11 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
         if (_image != null) Image.file(_image!),
         ElevatedButton(
           onPressed: () => _getImage(ImageSource.camera),
-          child: Text('Take Photo'),
+          child: const Text('Take Photo'),
         ),
         ElevatedButton(
           onPressed: () => _getImage(ImageSource.gallery),
-          child: Text('Choose from Gallery'),
+          child: const Text('Choose from Gallery'),
         ),
       ],
     );
