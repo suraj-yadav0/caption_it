@@ -74,11 +74,12 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-
-          Center(
+const SizedBox(height: 30),
+         const Center(
             child: Text(
-              'Welcome to CaptionIt!',
-              style: Theme.of(context).textTheme.titleLarge,
+              'C A P T I O N  I T',
+
+              style: TextStyle(fontSize: 30,fontWeight: FontWeight.w300),
             ),  
           ),
           Expanded(
