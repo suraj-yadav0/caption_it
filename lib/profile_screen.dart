@@ -30,18 +30,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-         const   CircleAvatar(
-              radius: 40,
-              backgroundImage: AssetImage('assets/profile_image.png'),
-            ),
+        const Center(
+           child:  CircleAvatar(
+                radius: 40,
+                backgroundImage: AssetImage('assets/profile_image.png'),
+              ),
+         ),
           const  SizedBox(height: 16),
-          const  Text('Username'),
+          const  Text('Suraj Yadav',style: TextStyle(fontSize: 20),),
           const  SizedBox(height: 8),
           const  Text('Your personal captioning app'),
           const  SizedBox(height: 16),
-          const  Text('Settings:'),
+          const  Text('Settings:',style: TextStyle(fontSize: 25),),
           const  SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
