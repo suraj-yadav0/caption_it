@@ -26,9 +26,9 @@ Here's a sample **README** file for the CaptionIt app, covering all necessary in
 
 ## Screenshots
 
-| Home Screen | Caption Suggestions | Favorites | Profile |
+| Onboarding | Home Screen | Caption Suggestions | Profile |
 | ----------- | ------------------- | --------- | ------- |
-| ![Home Screen](https://github.com/user-attachments/assets/d2a403c3-ccb3-49b6-81f9-10204d8ee8a1) | ![Caption Suggestions](https://github.com/user-attachments/assets/71d55c2a-34a1-4c68-8faf-9fe3aa64cbc2) | ![Favorites](https://github.com/user-attachments/assets/8cd14693-f9e2-4c2c-befc-9223caee6868) | ![Profile](https://github.com/user-attachments/assets/654073d5-3554-4518-b741-03e74d118a1c) |
+| ![Onboarding](https://github.com/user-attachments/assets/8cd14693-f9e2-4c2c-befc-9223caee6868) | ![Home Screen](https://github.com/user-attachments/assets/d2a403c3-ccb3-49b6-81f9-10204d8ee8a1) | ![Caption Suggestions](https://github.com/user-attachments/assets/71d55c2a-34a1-4c68-8faf-9fe3aa64cbc2) |  ![Profile](https://github.com/user-attachments/assets/654073d5-3554-4518-b741-03e74d118a1c) |
 
 
 
