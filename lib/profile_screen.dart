@@ -21,7 +21,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const HomePage()));
           },
         ),
         title: const Text('P R O F I L E'),
@@ -33,23 +34,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-        const Center(
-           child:  CircleAvatar(
+            const Center(
+              child: CircleAvatar(
                 radius: 40,
                 backgroundImage: AssetImage('assets/profile_image.png'),
               ),
-         ),
-          const  SizedBox(height: 16),
-          const  Text('Suraj Yadav',style: TextStyle(fontSize: 20),),
-          const  SizedBox(height: 8),
-          const  Text('Your personal captioning app'),
-          const  SizedBox(height: 16),
-          const  Text('Settings:',style: TextStyle(fontSize: 25),),
-          const  SizedBox(height: 8),
+            ),
+            const SizedBox(height: 16),
+            const Text(
+              'Suraj Yadav',
+              style: TextStyle(fontSize: 20),
+            ),
+            const SizedBox(height: 8),
+            const Text('Your personal captioning app'),
+            const SizedBox(height: 16),
+            const Text(
+              'Settings:',
+              style: TextStyle(fontSize: 25),
+            ),
+            const SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-           const     Text('Language'),
+                const Text('Language'),
                 DropdownButton<String>(
                   value: _language,
                   items: ['English', 'Spanish', 'French']
@@ -66,11 +73,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ],
             ),
-          const  SizedBox(height: 8),
+            const SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-             const   Text('Default Style'),
+                const Text('Default Style'),
                 DropdownButton<String>(
                   value: _defaultStyle,
                   items: ['Funny', 'Inspirational', 'Poetic', 'Romantic']
@@ -87,31 +94,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ],
             ),
-          const  SizedBox(height: 8),
+            const SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-             const   Text('API Usage'),
+                const Text('API Usage'),
                 Text('$_apiUsage/100 Captions'),
               ],
             ),
-           const SizedBox(height: 16),
+            const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: (){
-  // Implement subscription/upgrade functionality
-},
-child: const Text('Subscription Options'),
-),
-const SizedBox(height: 16),
-ElevatedButton(
-  onPressed: () {
-    // Implement logout functionality
-  },
-  child: const Text('Logout'),
-),
-],
-),
-),
-);
-}
+              onPressed: () {
+                // Implement subscription/upgrade functionality
+              },
+              child: const Text('Subscription Options'),
+            ),
+            const SizedBox(height: 25),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/onboarding');
+              },
+              child: const Text('Logout'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
