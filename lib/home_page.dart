@@ -39,6 +39,7 @@ class _HomePageState extends State<HomePage> {
       // ),
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        fixedColor: Colors.teal,
         currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {
@@ -88,8 +89,11 @@ const SizedBox(height: 30),
                   Navigator.pushNamed(context, '/image-picker');
                 },
                 icon: const Icon(Icons.camera_alt),
-                label: const Text('Upload Photo'),
+                label: const Text('Upload Photo',style: TextStyle(color: Colors.white),),
                 style: ElevatedButton.styleFrom(
+                  iconColor: Colors.white,
+                 backgroundColor: Colors.teal,
+                  
                   padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
                   textStyle: const TextStyle(fontSize: 18),
                 ),
