@@ -78,7 +78,6 @@ const SizedBox(height: 30),
          const Center(
             child: Text(
               'C A P T I O N  I T',
-
               style: TextStyle(fontSize: 30,fontWeight: FontWeight.w300),
             ),  
           ),
@@ -112,7 +111,7 @@ const SizedBox(height: 30),
                     final caption = captionProvider.recentCaptions[index];
                     return _RecentCaptionCard(
                       caption: caption,
-                      imageAsset: 'https://i.postimg.cc/Qtxc8xgv/welcome-image.png',
+                      imageAsset: 'https://cdn.dribbble.com/users/89015/screenshots/5594172/media/326d4ea1d8d3d391a8a3c22c7c71dd4a.png?resize=800x600&vertical=center',
                       onSave: () {
                         captionProvider.addToFavorites(caption);
                       },

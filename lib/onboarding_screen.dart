@@ -14,22 +14,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     {
       'title': 'Welcome to CaptionIt',
       'description': 'Your personal caption assistant!',
-      'imageAsset': 'https://i.postimg.cc/Qtxc8xgv/welcome-image.png',
+      'imageAsset': 'https://cdn.dribbble.com/users/89015/screenshots/5594172/media/326d4ea1d8d3d391a8a3c22c7c71dd4a.png?resize=800x600&vertical=center',
     },
     {
       'title': 'Upload a Photo',
       'description': 'Choose an image to get started.',
-      'imageAsset': 'https://i.postimg.cc/Qtxc8xgv/welcome-image.png',
+      'imageAsset': 'https://cdn.dribbble.com/userupload/4897702/file/original-636aae19b1a4407389810d0c8ea5b4db.png?resize=1600x1200',
     },
     {
       'title': 'Select a Caption Style',
       'description': 'Pick from Funny, Inspirational, Poetic, or Romantic.',
-      'imageAsset': 'https://i.postimg.cc/Qtxc8xgv/welcome-image.png',
+      'imageAsset': 'https://cdn.dribbble.com/userupload/4897702/file/original-636aae19b1a4407389810d0c8ea5b4db.png?resize=1600x1200',
     },
     {
       'title': 'Generate Captions',
       'description': 'Discover the perfect caption for your photo.',
-      'imageAsset': 'https://i.postimg.cc/Qtxc8xgv/welcome-image.png',
+      'imageAsset': 'https://cdn.dribbble.com/users/89015/screenshots/5594172/media/326d4ea1d8d3d391a8a3c22c7c71dd4a.png?resize=800x600&vertical=center',
     },
   ];
 
