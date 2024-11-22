@@ -86,7 +86,7 @@ const SizedBox(height: 30),
             child: Center(
               child: ElevatedButton.icon(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/caption-style');
+                  Navigator.pushNamed(context, '/image-picker');
                 },
                 icon: const Icon(Icons.camera_alt),
                 label: const Text('Upload Photo'),
