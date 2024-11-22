@@ -34,21 +34,14 @@ class _CaptionStyleScreenState extends State<CaptionStyleScreen> {
             children: [
            InkWell(
             onTap: () {
-             // Navigator.pushNamed(context, '/image-picker');
+              Navigator.pushNamed(context, '/image-picker');
             },
             child: const  Icon(Icons.camera, size: 100,)),
             const  SizedBox(height: 16),
              const Text('Choose Caption Style:'),
              if (_selectedImage != null)
                 Image.file(_selectedImage!, width: 300, height: 300),
-            const SizedBox(height: 16),
-              ImagePickerWidget(
-                onImageSelected: (image) {
-                  setState(() {
-                    _selectedImage = image;
-                  });
-                },
-              ),
+         
               DropdownButton<String>(
                 value: _selectedStyle,
                 items: ['Funny', 'Inspirational', 'Poetic', 'Romantic']
