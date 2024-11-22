@@ -81,7 +81,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   Widget _buildPageIndicator(bool isCurrentPage) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 4.0),
+      padding: const EdgeInsets.symmetric(horizontal: 4.0),
       child: Container(
         width: 10,
         height: 10,
