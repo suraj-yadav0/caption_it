@@ -19,12 +19,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     {
       'title': 'Upload a Photo',
       'description': 'Choose an image to get started.',
-      'imageAsset': 'https://cdn.dribbble.com/userupload/4897702/file/original-636aae19b1a4407389810d0c8ea5b4db.png?resize=1600x1200',
+      'imageAsset': 'https://cdn.dribbble.com/users/89015/screenshots/5594172/media/326d4ea1d8d3d391a8a3c22c7c71dd4a.png?resize=800x600&vertical=center',
     },
     {
       'title': 'Select a Caption Style',
       'description': 'Pick from Funny, Inspirational, Poetic, or Romantic.',
-      'imageAsset': 'https://cdn.dribbble.com/userupload/4897702/file/original-636aae19b1a4407389810d0c8ea5b4db.png?resize=1600x1200',
+      'imageAsset': 'https://cdn.dribbble.com/users/89015/screenshots/5594172/media/326d4ea1d8d3d391a8a3c22c7c71dd4a.png?resize=800x600&vertical=center',
     },
     {
       'title': 'Generate Captions',
@@ -60,6 +60,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
           const  SizedBox(height: 16),
             ElevatedButton(
+                style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.teal),
+              ),
               onPressed: () {
                 if (_currentPage < _onboardingPages.length - 1) {
                   setState(() {
@@ -71,7 +74,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               },
               child: Text(_currentPage == _onboardingPages.length - 1
                   ? 'Get Started'
-                  : 'Next'),
+                  : 'Next',style: const TextStyle(color: Colors.white),),
             ),
           ],
         ),
