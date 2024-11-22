@@ -104,17 +104,23 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
             ElevatedButton(
+                style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.teal),
+              ),
               onPressed: () {
                 // Implement subscription/upgrade functionality
               },
-              child: const Text('Subscription Options'),
+              child: const Text('Subscription Options',style: TextStyle(color: Colors.white),),
             ),
             const SizedBox(height: 25),
             ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.teal),
+              ),
               onPressed: () {
                 Navigator.pushNamed(context, '/onboarding');
               },
-              child: const Text('Logout'),
+              child: const Text('Logout',style: TextStyle(color: Colors.white),),
             ),
           ],
         ),
