@@ -37,7 +37,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const Center(
               child: CircleAvatar(
                 radius: 40,
-                backgroundImage: AssetImage('assets/profile_image.png'),
+                backgroundImage: NetworkImage(
+                    'https://cdn.dribbble.com/users/89015/screenshots/5594172/media/326d4ea1d8d3d391a8a3c22c7c71dd4a.png?resize=800x600&vertical=center'),
               ),
             ),
             const SizedBox(height: 16),
@@ -46,7 +47,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               style: TextStyle(fontSize: 20),
             ),
             const SizedBox(height: 8),
-            const Text('Your personal captioning app'),
+            const Text('Your personal captioning app',style: TextStyle(fontWeight: FontWeight.w300),),
             const SizedBox(height: 16),
             const Text(
               'Settings:',
@@ -102,7 +103,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 Text('$_apiUsage/100 Captions'),
               ],
             ),
-            const SizedBox(height: 20),
+           const Spacer(),
             ElevatedButton(
                 style: ButtonStyle(
                 backgroundColor: WidgetStateProperty.all(Colors.teal),
@@ -122,6 +123,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
               },
               child: const Text('Logout',style: TextStyle(color: Colors.white),),
             ),
+
+           const Spacer(),
           ],
         ),
       ),

@@ -90,7 +90,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         height: 10,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: isCurrentPage ? Colors.blue : Colors.grey[400],
+          color: isCurrentPage ? Colors.teal : Colors.grey[400],
         ),
       ),
     );
