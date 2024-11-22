@@ -99,6 +99,9 @@ class CaptionItApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'CaptionIt',
+       locale: DevicePreview.locale(context), // add this line
+      builder: DevicePreview.appBuilder,  // add this line
+       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
