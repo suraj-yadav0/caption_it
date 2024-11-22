@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:caption_it/widgets/image_picker_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'caption_provider.dart';
