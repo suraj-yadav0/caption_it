@@ -99,6 +99,12 @@ class ImageAnalyzerState extends State<ImageAnalyzer> {
     // Creates the UI that is displayed to the user
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back , color: Colors.white),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         title: const Text('Caption Genetator', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.teal,
       ),
